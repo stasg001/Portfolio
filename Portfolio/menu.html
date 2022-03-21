@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+  
+<title>Chick-fil-A</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
+
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: #4CAF50;
+  
+}
+
+.value-button {
+  display: inline-block;
+  border: 1px solid #ddd;
+  margin: 0px;
+  width: 40px;
+  height: 20px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 11px 0;
+  background: #eee;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.value-button:hover {
+  cursor: pointer;
+}
+
+form #decrease {
+  margin-right: -4px;
+  border-radius: 8px 0 0 8px;
+}
+
+form #increase {
+  margin-left: -4px;
+  border-radius: 0 8px 8px 0;
+}
+
+form #input-wrap {
+  margin: 0px;
+  padding: 0px;
+}
+
+input#number {
+  text-align: center;
+  border: none;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  margin: 0px;
+  width: 40px;
+  height: 40px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+</style>
+<script>
+function increaseValue() {
+  var value = parseInt(document.getElementById('number').value, 10);
+  value = isNaN(value) ? 0 : value;
+  value++;
+  document.getElementById('number').value = value;
+}
+
+function decreaseValue() {
+  var value = parseInt(document.getElementById('number').value, 10);
+  value = isNaN(value) ? 0 : value;
+  value < 1 ? value = 1 : '';
+  value--;
+  document.getElementById('number').value = value;
+}
+
+function increaseValue1() {
+  var value = parseInt(document.getElementById('number1').value, 10);
+  value = isNaN(value) ? 0 : value;
+  value++;
+  document.getElementById('number1').value = value;
+}
+
+function decreaseValue1() {
+  var value = parseInt(document.getElementById('number1').value, 10);
+  value = isNaN(value) ? 0 : value;
+  value < 1 ? value = 1 : '';
+  value--;
+  document.getElementById('number1').value = value;
+}
+
+function increaseValue2() {
+  var value = parseInt(document.getElementById('number2').value, 10);
+  value = isNaN(value) ? 0 : value;
+  value++;
+  document.getElementById('number2').value = value;
+}
+
+function decreaseValue2() {
+  var value = parseInt(document.getElementById('number2').value, 10);
+  value = isNaN(value) ? 0 : value;
+  value < 1 ? value = 1 : '';
+  value--;
+  document.getElementById('number2').value = value;
+}
+
+function increaseValue3() {
+  var value = parseInt(document.getElementById('number3').value, 10);
+  value = isNaN(value) ? 0 : value;
+  value++;
+  document.getElementById('number3').value = value;
+}
+
+function decreaseValue3() {
+  var value = parseInt(document.getElementById('number3').value, 10);
+  value = isNaN(value) ? 0 : value;
+  value < 1 ? value = 1 : '';
+  value--;
+  document.getElementById('number3').value = value;
+}
+
+function increaseValue4() {
+  var value = parseInt(document.getElementById('number4').value, 10);
+  value = isNaN(value) ? 0 : value;
+  value++;
+  document.getElementById('number4').value = value;
+}
+
+function decreaseValue4() {
+  var value = parseInt(document.getElementById('number4').value, 10);
+  value = isNaN(value) ? 0 : value;
+  value < 1 ? value = 1 : '';
+  value--;
+  document.getElementById('number4').value = value;
+}
+
+function increaseValue5() {
+  var value = parseInt(document.getElementById('number5').value, 10);
+  value = isNaN(value) ? 0 : value;
+  value++;
+  document.getElementById('number5').value = value;
+}
+
+function decreaseValue5() {
+  var value = parseInt(document.getElementById('number5').value, 10);
+  value = isNaN(value) ? 0 : value;
+  value < 1 ? value = 1 : '';
+  value--;
+  document.getElementById('number5').value = value;
+}
+</script>
+<body>
+<!-- Start Content -->
+<div id="home" class="w3-content">
+
+<!-- Menu -->
+<div id="menu" class="w3-container w3-black w3-xxlarge w3-padding-64">
+<h1 class="w3-center w3-jumbo w3-padding-32">THE MENU</h1>
+<div class="w3-row w3-center w3-border w3-border-dark-grey">
+<a href="#pizza"><div class="w3-third w3-padding-large w3-red">Nuggets and Fries</div></a>
+<a href="#pasta"><div class="w3-third w3-padding-large w3-hover-red">Sandwhiches and shakes</div></a>
+</div>
+
+<div id="pizza" class="w3-container w3-white w3-padding-32">
+
+<h1><b>Nuggets</b> <span class="w3-tag w3-red w3-round">Hot!</span>
+<span class="w3-right w3-tag w3-dark-grey w3-round">$5.00</span></h1>
+<span><div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
+<input type="number" id="number" value="0" />
+<div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div></span>
+<hr>
+<h1><b>Fries</b> <span class="w3-tag w3-red w3-round">Hot!</span>
+<span class="w3-right w3-tag w3-dark-grey w3-round">$3.50</span></h1>
+<span><div class="value-button" id="decrease" onclick="decreaseValue1()" value="Decrease Value">-</div>
+    <input type="number1" id="number1" value="0" />
+    <div class="value-button" id="increase" onclick="increaseValue1()" value="Increase Value">+</div></span>
+</div>
+<form action="line1.html">
+    <button class="button ">CHECK OUT</button>
+</form>
+
+
+<h1 id="pasta" class="w3-center w3-jumbo w3-padding-32">Sandwhiches and Shakes</h1>
+<div class="w3-container w3-white w3-padding-32">
+
+
+<h1><b>Chicken Sandwhich</b> <span class="w3-tag w3-grey w3-round">Popular</span>
+<span class="w3-right w3-tag w3-dark-grey w3-round">$7.50</span></h1>
+<span><div class="value-button" id="decrease" onclick="decreaseValue2()" value="Decrease Value">-</div>
+<input type="number2" id="number2" value="0" />
+<div class="value-button" id="increase" onclick="increaseValue2()" value="Increase Value">+</div></span>
+
+<hr>
+<h1><b>Chicken Sandwhich Deluxe</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$14.50</span></h1>
+<span><div class="value-button" id="decrease" onclick="decreaseValue3()" value="Decrease Value">-</div>
+<input type="number3" id="number3" value="0" />
+<div class="value-button" id="increase" onclick="increaseValue3()" value="Increase Value">+</div></span>
+
+<hr>
+<h1><b>Spicy Chicken Sandwhich</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$11.00</span></h1>
+<span><div class="value-button" id="decrease" onclick="decreaseValue4()" value="Decrease Value">-</div>
+<input type="number4" id="number4" value="0" />
+<div class="value-button" id="increase" onclick="increaseValue4()" value="Increase Value">+</div></span>
+
+<hr>
+<h1><b>Cool Wrap</b> <span class="w3-tag w3-grey w3-round">Seasonal</span>
+<span class="w3-right w3-tag w3-dark-grey w3-round">$5.50</span></h1>
+<span><div class="value-button" id="decrease" onclick="decreaseValue5()" value="Decrease Value">-</div>
+<input type="number5" id="number5" value="0" />
+<div class="value-button" id="increase" onclick="increaseValue5()" value="Increase Value">+</div></span>
+</div>
+<form action="line2.html">
+    <button class="button ">CHECK OUT</button>
+</form>
+
+
+
+</div>
+
+
+<!-- End Content -->
+</div>
+</body>
+</html>
+
